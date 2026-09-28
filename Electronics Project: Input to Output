@@ -1,0 +1,41 @@
+Student Name, Class, Class Semester/Section/Year
+  Demetrius IMM113 FA2026
+Project Name
+Electronics Project: Input to Output
+A brief description of the project
+Breaking the circuit board-  Potentiometer Analog Input With Arduino 
+
+Attribution and/or Bibliography (if not included elsewhere)
+References
+https://www.youtube.com/watch?v=-EDYMQ9lczA&t=22s
+Instructions for engaging with the project (controls, how to)
+Relevant constraints/operating conditions 
+
+Power dissipation | 120mW 
+
+Continuous foward current | 30mA 
+
+Peak current | 100mA 
+
+Reverse Voltage 5V 
+
+Operating temperature –40 – 105 Fa 
+
+Storage temperature –40 – 105Fa 
+
+Forward voltage typ 2.8 | 3.6v max 
+
+Reverse Current max 10v 
+
+Luminous intensity 150mcd max 
+
+Useless noise  
+
+Minimum usable noise floor not specified  
+
+0 mA produce very little light. 
+
+Below 5 mA, provides limited  output. 
+ 
+Anything else someone (e.g. someone 5 years from now) may need to know to understand/engage with the project.
+How to wire circut board
