@@ -1,0 +1,169 @@
+Using light input to create a digital formation within Touch designer  
+
+ 
+
+Purpose 
+
+Step by step guide that explains the physical input that translates to an digital output using the following tools: Arduino, photoresistor, and touch designer. The raw light will form a relationship with the specified equipment to create and control the pixelation within the touch designer.  
+
+ 
+
+Signal path in order  
+
+Light  
+
+Ardunio  
+
+encoding  
+
+usb connector  
+
+touch designer  
+
+Serial Dat  
+
+light value  
+
+Channel 
+
+Wiring and hardware 
+
+Arduino 
+
+Photo resistor 
+
+10k resistor 
+
+Breadboard 
+
+Usb cable 
+
+Jumper wires 
+
+ 
+
+Instructions 
+
+Plug the photo resistor into the breadboard,  
+
+Grab a wire and connect it between 5v and the Photoresistor 
+
+Plug the 10k resistor between the junction just created and gnd 
+
+Then connect the junction to A0 
+
+Boom done  
+
+Credits (https://www.bing.com/videos/riverview/relatedvideo?q=photoresistor+arduino&&mid=0ED7ECBD546DAE6950D10ED7ECBD546DAE6950D1&churl=https%3a%2f%2fwww.youtube.com%2fchannel%2fUCPrbh_9pghzmzkI1wJJRv7Q&FORM=VRDGAR)  
+
+ 
+
+Message format and encoder  
+
+(Work cited Photoresistor LDR Arduino: Complete Guide to Light Sensing Projects - PCBSync) 
+
+ 
+
+Multi-Level Light Indicator with LDR 
+
+This project uses multiple LEDs to indicate different light levels: 
+
+// Photoresistor LDR Arduino – Multi-Level Light Indicator 
+
+// Three LEDs show light intensity ranges 
+
+const int ldrPin = A0; 
+
+const int ledGreen = 11;   // Bright light 
+
+const int ledYellow = 10;  // Medium light 
+
+const int ledRed = 9;      // Low light 
+
+void setup() { 
+
+  Serial.begin(9600); 
+
+  pinMode(ledGreen, OUTPUT); 
+
+  pinMode(ledYellow, OUTPUT); 
+
+  pinMode(ledRed, OUTPUT); 
+
+} 
+
+void loop() { 
+
+  int lightValue = analogRead(ldrPin); 
+
+  // Turn off all LEDs first 
+
+  digitalWrite(ledGreen, LOW); 
+
+  digitalWrite(ledYellow, LOW); 
+
+  digitalWrite(ledRed, LOW); 
+
+  // Determine light level and activate appropriate LED 
+
+  if (lightValue > 700) { 
+
+    digitalWrite(ledGreen, HIGH); 
+
+    Serial.println(“Bright Light – Green”); 
+
+  } 
+
+  else if (lightValue > 400) { 
+
+    digitalWrite(ledYellow, HIGH); 
+
+    Serial.println(“Medium Light – Yellow”); 
+
+  } 
+
+  else { 
+
+    digitalWrite(ledRed, HIGH); 
+
+    Serial.println(“Low Light – Red”); 
+
+  } 
+
+  delay(200); 
+
+ 
+
+DECODER & VALIDATION 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Elements of Information 
+
+Light intensity 
+
+Measurement from photoresistor  
+
+200-650 
+
+Timestamp 
+
+Elapsed time from the start of the Arduino  
+
+X Milliseconds  
+
+Status 
+
+Shows if data was received 
+
+Identifier  
+
+Show sensory type 
+
+LDR 
